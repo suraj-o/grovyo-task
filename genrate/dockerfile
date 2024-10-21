@@ -1,0 +1,10 @@
+FROM node:20
+
+WORKDIR /home/app
+
+COPY package*.json .
+COPY script.js script.js
+
+RUN npm install 
+
+ENTRYPOINT [ "node" , "script.js"]
